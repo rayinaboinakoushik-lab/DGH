@@ -6,7 +6,7 @@ import streamlit as st
 # --- Load Data ---
 @st.cache_data
 def load_data():
-    df = pd.read_csv("owid-covid-data.csv")
+    df = pd.read_csv("owid-covid-data.zip")
     columns_needed = [
         "location", "date", "total_cases", "new_cases",
         "total_deaths", "population", "people_vaccinated"
@@ -114,3 +114,4 @@ monthly_cases.plot(ax=ax)
 ax.set_xlabel("Month")
 ax.set_ylabel("New Cases")
 st.pyplot(fig)
+
